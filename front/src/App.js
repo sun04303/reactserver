@@ -1,15 +1,17 @@
 import React from 'react';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import 'antd/dist/antd.css'
-import ContentListCard from './components/ContentListCard';
-import ContentWrite from './components/ContentWrite';
+import Home from './pages/Home'
+import Create from './pages/Create';
+import Update from './pages/Update';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<ContentListCard />} />
-        <Route path="/write" element={<ContentWrite />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/write" element={<Create />} />
+        <Route path="/update/:id" element={<Update />} />
       </Routes>
     </BrowserRouter>
   );
